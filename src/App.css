@@ -1,0 +1,582 @@
+/* ==========================================
+   NEXCAN — ESTILOS GERAIS
+========================================== */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #090b0f;
+  color: #f5f5f5;
+}
+
+/* ==========================================
+   HEADER / NAVBAR
+========================================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 7%;
+  border-bottom: 1px solid #1e222b;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+  border-radius: 11px;
+  background: #090b0f;
+}
+
+.brand-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-tag {
+  color: #737984;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* ==========================================
+   CONTEÚDO PRINCIPAL
+========================================== */
+
+.main {
+  width: min(1100px, 86%);
+  margin: auto;
+  padding: 70px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.intro h1 {
+  margin: 20px 0;
+  font-size: clamp(45px, 6vw, 78px);
+  letter-spacing: -4px;
+  line-height: 1.08;
+}
+
+.intro h1 span {
+  color: #a3ffcc;
+}
+
+.eyebrow {
+  color: #a3ffcc;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.intro p {
+  max-width: 410px;
+  color: #9299a7;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   CARD DO SCANNER
+========================================== */
+
+.scanner-card {
+  min-width: 0;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+  border: 1px solid #262d36;
+  border-radius: 22px;
+  background: #11151c;
+  box-shadow: 0 25px 80px #0005;
+}
+
+.scanner-content {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.scanner-content h2 {
+  margin: 0 0 10px;
+  font-size: 21px;
+}
+
+.scanner-content p {
+  margin: 0 0 28px;
+  color: #9299a7;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   ESTADO INICIAL
+========================================== */
+
+.qr-placeholder {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 28px;
+  border: 2px dashed #a3ffcc;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 85px;
+  color: #a3ffcc;
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.primary-button {
+  background: #a3ffcc;
+  color: #09110d;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #c1ffdf;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background: #252b34;
+  color: #fff;
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: #323b47;
+  border-color: #424e5d;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.text-button {
+  display: block;
+  width: 100%;
+  margin-top: 22px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #9299a7;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.text-button:hover {
+  color: #a3ffcc;
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.text-button:focus-visible,
+.footer a:focus-visible {
+  outline: 2px solid #a3ffcc;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   CÂMERA
+========================================== */
+
+.camera-reader {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border: 1px solid #29313b;
+  border-radius: 16px;
+  background: #090c11;
+}
+
+.camera-reader video {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.camera-reader img {
+  display: none;
+}
+
+/* ==========================================
+   ANIMAÇÃO DO SCANNER
+   Reservada para uso futuro
+========================================== */
+
+.scan-frame {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 25px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border: 3px solid #a3ffcc;
+  border-radius: 22px;
+  color: #a3ffcc;
+  font-size: 95px;
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #a3ffcc;
+  box-shadow: 0 0 15px #a3ffcc;
+  animation: scanning 2s infinite alternate ease-in-out;
+}
+
+@keyframes scanning {
+  from {
+    top: 10%;
+  }
+
+  to {
+    top: 90%;
+  }
+}
+
+/* ==========================================
+   LEITURA POR IMAGEM
+========================================== */
+
+/*
+  O input fica invisível.
+  O container de processamento permanece
+  renderizado, com dimensões definidas,
+  para a biblioteca conseguir ler imagens.
+*/
+
+.file-input-hidden {
+  display: none;
+}
+
+.file-reader-hidden {
+  position: absolute;
+  left: -10000px;
+  top: 0;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.upload-divider {
+  color: #69717e;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.upload-section .secondary-button {
+  width: 100%;
+  max-width: 280px;
+}
+
+.upload-section .secondary-button:disabled {
+  cursor: wait;
+}
+
+/* ==========================================
+   RESULTADO DA LEITURA
+========================================== */
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #a3ffcc;
+  color: #07110b;
+  font-size: 35px;
+}
+
+.success-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #a3ffcc;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.result-type {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border: 1px solid #32483e;
+  border-radius: 6px;
+  color: #a3ffcc;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.result-origin {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.result-origin span {
+  color: #727b89;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.result-origin strong {
+  color: #dce5ed;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.result-file-type {
+  margin-bottom: 12px;
+  color: #a3ffcc;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.result-box {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #29313b;
+  border-radius: 10px;
+  background: #090c11;
+  color: #a3ffcc;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.result-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.result-actions a {
+  min-width: 110px;
+}
+
+.scanner-error {
+  color: #ff9c9c !important;
+}
+
+.copy-message {
+  margin: 12px 0 0 !important;
+  color: #a3ffcc !important;
+}
+
+.file-note {
+  margin-top: 14px !important;
+  margin-bottom: 0 !important;
+  color: #9299a7;
+  font-size: 11px !important;
+}
+
+/* ==========================================
+   PRIVACIDADE
+========================================== */
+
+.privacy-note {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #727b89;
+  font-size: 12px;
+}
+
+.privacy-note span {
+  margin-right: 6px;
+  color: #a3ffcc;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 23px 7%;
+  border-top: 1px solid #1e222b;
+  color: #727b89;
+  font-size: 11px;
+}
+
+.footer a {
+  color: #a3ffcc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — TABLETS
+========================================== */
+
+@media (max-width: 850px) {
+  .main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding: 50px 0;
+  }
+
+  .intro h1 {
+    letter-spacing: -2px;
+  }
+
+  .scanner-card {
+    min-height: 400px;
+  }
+
+  .header-tag {
+    display: none;
+  }
+}
+
+/* ==========================================
+   RESPONSIVIDADE — CELULARES
+========================================== */
+
+@media (max-width: 480px) {
+  .header {
+    padding: 20px 6%;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .brand-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .main {
+    width: 88%;
+    gap: 32px;
+    padding: 40px 0;
+  }
+
+  .scanner-card {
+    min-height: 380px;
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .camera-reader {
+    border-radius: 12px;
+  }
+
+  .result-actions {
+    flex-direction: column;
+  }
+
+  .result-actions a,
+  .result-actions button {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-line {
+    animation: none;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .text-button,
+  .footer a {
+    transition: none;
+  }
+}
