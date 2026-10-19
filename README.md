@@ -6,7 +6,13 @@ O Nexcan é uma aplicação web que permite identificar e interpretar QR Codes u
 
 Seu objetivo é oferecer uma experiência simples, rápida e controlada: após identificar um QR Code, o sistema encerra automaticamente a câmera e apresenta o conteúdo para que o usuário decida o que fazer.
 
-**[Repositório no GitHub](https://github.com/GuiBragz/Nexcan)** · **[Portfólio do desenvolvedor](https://guibraga.com.br)**
+**[Repositório no GitHub](https://github.com/GuiBragz/Nexcan)** · **[Portfólio do desenvolvedor](https://guibraga.com.br)**## Acesse o Nexcan
+
+**Aplicação online:** https://nexcan.vercel.app/
+
+O Nexcan funciona diretamente no navegador, sem necessidade de instalação.
+
+[Experimentar Nexcan](https://nexcan.vercel.app/)
 
 ---
 
