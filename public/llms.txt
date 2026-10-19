@@ -1,0 +1,43 @@
+
+# Nexcan
+
+> Nexcan é um leitor gratuito de QR Codes online, desenvolvido por Guilherme Braga Ferreira.
+
+Site oficial: https://nexcan.vercel.app/
+
+## O que é
+
+Nexcan é uma aplicação web para ler QR Codes diretamente no navegador, sem necessidade de instalar um aplicativo.
+
+## Funcionalidades
+
+- Leitura de QR Codes pela câmera.
+- Leitura de QR Codes em imagens e capturas de tela.
+- Identificação de links HTTP e HTTPS.
+- Identificação de arquivos por extensões conhecidas.
+- Exibição de texto contido em QR Codes.
+- Cópia dos resultados.
+- Abertura manual de links.
+- Encerramento da câmera após a identificação.
+
+## Privacidade
+
+A leitura ocorre no navegador.
+A aplicação não necessita de backend para processar os QR Codes.
+Links não são abertos automaticamente.
+
+## Limitações
+
+A identificação de arquivos utiliza informações do endereço.
+O download depende do navegador e do servidor de origem.
+A aplicação não verifica a reputação de links.
+
+## Tecnologias
+
+React, TypeScript, Vite, CSS e html5-qrcode.
+
+## Links
+
+- Aplicação: https://nexcan.vercel.app/
+- Código-fonte: https://github.com/GuiBragz/Nexcan
+- Desenvolvedor: https://guibraga.com.br
